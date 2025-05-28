@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejsapp02
+  labels:
+    app: nodejsapp02
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodejsapp02
+  template:
+    metadata:
+      labels:
+        app: nodejsapp02
+    spec:
+      containers:
+      - name: nodejsapp02
+        image: dheeraj394/express-demo:03
+        ports:
+        - containerPort: 3001
