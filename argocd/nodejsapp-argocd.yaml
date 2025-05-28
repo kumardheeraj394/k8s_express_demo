@@ -4,7 +4,7 @@ metadata:
   name: nodejs-app02
   namespace: argocd
 spec:
-  project: nodejs02
+  project: default
   source:
     repoURL: 'https://github.com/kumardheeraj394/k8s_express_demo.git'
     targetRevision: HEAD
