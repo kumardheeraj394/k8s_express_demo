@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodejsapp
+spec:
+  selector:
+    app: nodejsapp
+  type: LoadBalancer
+  loadBalancerIP: 10.10.37.247
+  ports:
+    - protocol: TCP
+      port: 3001
+      targetPort: 3000
