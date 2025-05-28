@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nodejs-app
+  namespace: argocd
+spec:
+  project: nodejs02
+  source:
+    repoURL: 'https://github.com/kumardheeraj394/k8s_express_demo.git'
+    targetRevision: HEAD
+    path: k8s-manifests
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: nodejsapp02
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
