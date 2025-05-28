@@ -6,7 +6,7 @@ spec:
   selector:
     app: nodejsapp
   type: LoadBalancer
-  loadBalancerIP: 10.10.37.231
+  loadBalancerIP: 10.10.37.248
   ports:
     - protocol: TCP
       port: 3001
